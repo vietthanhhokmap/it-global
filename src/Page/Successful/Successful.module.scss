@@ -1,0 +1,113 @@
+.Successful {
+  height: auto;
+  padding: 10px 15px 100px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // position: relative;
+
+  .Content {
+    width: 100%;
+    padding: 0 15px;
+
+    .title {
+      margin-bottom: 20px;
+
+      h2 {
+        color: #191c2f;
+        font-size: 2.765em;
+        line-height: 1.2em;
+        font-family: "Be Vietnam", sans-serif;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+    }
+
+    .card {
+      width: 100%;
+      display: grid;
+      align-self: center;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+
+      .card-item {
+        height: 100%;
+        padding: 0 10px;
+        border-radius: 0.25rem;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        align-self: center;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        line-height: 1.8em;
+        justify-content: start;
+        // position: relative;
+
+        .card-image {
+          height: 100px;
+          width: 100%;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        .card-body {
+          padding: 20px;
+
+          .cart-title {
+            margin-bottom: 12px;
+            font-weight: 700px;
+            color: #191c2f;
+            font-size: 1.118em;
+            line-height: 1.3em;
+          }
+
+          .card-text {
+            letter-spacing: -0.3px;
+          }
+        }
+
+        .card-footer {
+          background-color: #ffffff;
+          padding: 12px 20px;
+          width: 100%;
+          // position: absolute;
+          // bottom: 0;
+
+          .card-btn {
+            height: auto;
+            cursor: pointer;
+            text-align: center;
+            transform: color 0.15s ease-in-out,
+              background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+              box-shadow 0.15s ease-in-out;
+
+            a {
+              display: inline-block;
+              border-radius: 0.25rem;
+              padding: 6px 12px;
+              color: #fff;
+              background-color: #007bff;
+              border-color: #007bff;
+              vertical-align: middle;
+              font-weight: 400;
+
+              .icon {
+                margin-bottom: -9px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
