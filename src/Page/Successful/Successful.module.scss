@@ -1,11 +1,11 @@
 .Successful {
   height: auto;
+  width: 100%;
   padding: 10px 15px 100px;
   background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  // position: relative;
 
   .Content {
     width: 100%;
@@ -48,7 +48,6 @@
         text-align: left;
         line-height: 1.8em;
         justify-content: start;
-        // position: relative;
 
         .card-image {
           height: 100px;
@@ -62,6 +61,7 @@
 
         .card-body {
           padding: 20px;
+          flex: 1 1 auto; //flex-grow:1, flex-shrink:1, flex-basic:auto
 
           .cart-title {
             margin-bottom: 12px;
@@ -80,8 +80,6 @@
           background-color: #ffffff;
           padding: 12px 20px;
           width: 100%;
-          // position: absolute;
-          // bottom: 0;
 
           .card-btn {
             height: auto;
@@ -107,6 +105,32 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+//Mobile : width < 740px
+@media screen and (max-width: 46.1875em) {
+  .Successful {
+    .Content {
+      .card {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+//Tablet : width >= 740px & < 1024px
+@media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .Successful {
+    .Content {
+      .card {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        overflow: hidden;
       }
     }
   }

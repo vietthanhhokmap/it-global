@@ -1,12 +1,49 @@
 import classNames from "classnames/bind";
 import React from "react";
 import styled from "./Successful.module.scss";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import thuexemiennam from "../../../src/components/Image/thuexemiennam.png";
 import hieutao from "../../../src/components/Image/hieutao.jpg";
 
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 function Successful() {
+  const slider = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        slider: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        slider: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        slider: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   const cx = classNames.bind(styled);
   return (
     <div className={cx("Successful")}>
